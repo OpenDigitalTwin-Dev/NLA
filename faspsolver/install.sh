@@ -1,9 +1,9 @@
 #!/bin/sh
 
-apt update
-apt -y install cmake
-apt -y install make
-apt -y install gcc g++
+sudo apt update
+sudo apt -y install cmake
+sudo apt -y install make
+sudo apt -y install gcc g++
 
 mkdir build
 cd build
