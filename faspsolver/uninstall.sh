@@ -1,4 +1,4 @@
 #!/bin/sh
 
 rm -rf build
-rm -rf ../faspsolver_install
+rm -rf ../install/faspsolver_install
