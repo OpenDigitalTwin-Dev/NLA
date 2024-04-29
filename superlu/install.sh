@@ -1,10 +1,10 @@
 #!/bin/sh
 
-apt update
-apt -y install cmake
-apt -y install make
-apt -y install gcc g++ gfortran
-apt -y install libpthread-stubs0-dev
+sudo apt update
+sudo apt -y install cmake
+sudo apt -y install make
+sudo apt -y install gcc g++ gfortran
+sudo apt -y install libpthread-stubs0-dev
 
 mkdir build
 cd build
