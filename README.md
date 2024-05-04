@@ -24,3 +24,8 @@
 	cd hypre
 	./install.sh or ./uninstall.sh
 ```
+
+``` 
+	cd mumps
+	./install.sh or ./uninstall.sh
+```
