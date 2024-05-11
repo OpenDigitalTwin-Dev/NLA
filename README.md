@@ -33,7 +33,7 @@ mumps
 suitesparse/umfpack
 ```
 	cd openblas
-	./install.sh or ./uninstall.sh
+	./install.sh
 	cd suitesparse
 	./install.sh or ./uninstall.sh
 ```
