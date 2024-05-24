@@ -37,3 +37,19 @@ suitesparse/umfpack
 	cd suitesparse
 	./install.sh or ./uninstall.sh
 ```
+scalapack
+```
+	cd lapack
+	./install.sh
+	cd scalapack
+	./install.sh or ./uninstall.sh
+```
+strumpack
+```
+	cd lapack
+	./install.sh
+	cd scalapack
+	./install.sh
+	cd strumpack
+	./install.sh or ./uninstall.sh
+```
