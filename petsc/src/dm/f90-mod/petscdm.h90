@@ -1,0 +1,7 @@
+      Interface
+       subroutine DMDestroy(a,ierr)
+          import tDM
+          DM a
+          PetscErrorCode ierr
+       end subroutine
+      end Interface
