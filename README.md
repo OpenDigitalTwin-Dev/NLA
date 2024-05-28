@@ -53,3 +53,8 @@ strumpack
 	cd strumpack
 	./install.sh or ./uninstall.sh
 ```
+petsc
+```
+	cd petsc
+	./install.sh or ./uninstall.sh
+```
