@@ -1,6 +1,0 @@
-#var skipthis vv
-var errname _ierr
-var prefix  MPI_
-func PetscInit
-func MPI_Init
-func MPI_Init_thread MPIF_ttt
