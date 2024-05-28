@@ -1,0 +1,57 @@
+make[3]: [/home/jiping/FENGSim/toolkit/NLA/petsc/../install/petsc_install/lib/petsc/conf/rules:46: ex19.PETSc] Error 2 (ignored)
+[1;31m*******************Error detected during compile or link!*******************
+See https://petsc.org/release/faq/
+/home/jiping/FENGSim/toolkit/NLA/petsc/src/snes/tutorials ex19
+*********************************************************************************[0;39m[0;49m
+mpicc -fPIC -Wall -Wwrite-strings -Wno-unknown-pragmas -Wno-lto-type-mismatch -fstack-protector -fvisibility=hidden -g3 -O0  -I/home/jiping/FENGSim/toolkit/NLA/install/petsc_install/include     -Wl,-export-dynamic ex19.c  -Wl,-rpath,/home/jiping/FENGSim/toolkit/NLA/install/petsc_install/lib -L/home/jiping/FENGSim/toolkit/NLA/install/petsc_install/lib -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib -L/usr/lib/x86_64-linux-gnu/openmpi/lib -Wl,-rpath,/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9 -lpetsc -llapack -lblas -lm -lX11 -ldl -lmpi_usempif08 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lgfortran -lm -lgfortran -lm -lgcc_s -lquadmath -lpthread -lstdc++ -lquadmath -ldl -o ex19
+/usr/bin/ld: cannot find -lpetsc
+collect2: error: ld returned 1 exit status
+make[4]: *** [<builtin>: ex19] Error 1
+Possible error running C/C++ src/snes/tutorials/ex19 with 1 MPI process
+See https://petsc.org/release/faq/
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./ex19
+Node: jiping-RedmiBook-14-II
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+Possible error running C/C++ src/snes/tutorials/ex19 with 2 MPI processes
+See https://petsc.org/release/faq/
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./ex19
+Node: jiping-RedmiBook-14-II
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
+make[3]: [/home/jiping/FENGSim/toolkit/NLA/petsc/../install/petsc_install/lib/petsc/conf/rules:100: ex5f.PETSc] Error 2 (ignored)
+[1;31m*******************Error detected during compile or link!*******************
+See https://petsc.org/release/faq/
+/home/jiping/FENGSim/toolkit/NLA/petsc/src/snes/tutorials ex5f
+*********************************************************[0;39m[0;49m
+mpif90 -fPIC -Wall -ffree-line-length-none -ffree-line-length-0 -Wno-lto-type-mismatch -Wno-unused-dummy-argument -g -O0   -I/home/jiping/FENGSim/toolkit/NLA/install/petsc_install/include     ex5f.F90  -Wl,-rpath,/home/jiping/FENGSim/toolkit/NLA/install/petsc_install/lib -L/home/jiping/FENGSim/toolkit/NLA/install/petsc_install/lib -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib -L/usr/lib/x86_64-linux-gnu/openmpi/lib -Wl,-rpath,/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9 -lpetsc -llapack -lblas -lm -lX11 -ldl -lmpi_usempif08 -lmpi_usempi_ignore_tkr -lmpi_mpifh -lmpi -lgfortran -lm -lgfortran -lm -lgcc_s -lquadmath -lpthread -lstdc++ -lquadmath -ldl -o ex5f
+ex5f.F90:34:10:
+
+   34 |       use petscsnes
+      |          1
+Fatal Error: Cannot open module file ‘petscsnes.mod’ for reading at (1): No such file or directory
+compilation terminated.
+make[4]: *** [/home/jiping/FENGSim/toolkit/NLA/petsc/../install/petsc_install/lib/petsc/conf/rules:217: ex5f] Error 1
+Possible error running Fortran example src/snes/tutorials/ex5f with 1 MPI process
+See https://petsc.org/release/faq/
+--------------------------------------------------------------------------
+mpiexec was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./ex5f
+Node: jiping-RedmiBook-14-II
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+Completed PETSc check examples
