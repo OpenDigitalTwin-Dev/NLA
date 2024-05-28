@@ -1,0 +1,1 @@
+--prefix=/test/petsc-main/arch-linux-c-debug CPPFLAGS=-O2
