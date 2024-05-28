@@ -1,6 +1,0 @@
-+bop	%a1="/homes/petsc"
-location <P><B>Location:</B><A HREF="%r1/%1#%rq0">%1</A>%n
-eof %n.SH ACK foo\
-bar\
-foobar
-
