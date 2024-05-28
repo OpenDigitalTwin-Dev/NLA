@@ -1,0 +1,46 @@
+# Basic makefile rules that all Makes share
+
+prefix=/home/jiping/FENGSim/toolkit/NLA/petsc/arch-linux-c-debug
+exec_prefix=${prefix}
+datarootdir=${prefix}/share
+libdir=${exec_prefix}/lib
+# Without the empty .suffixes, some makes choose the wrong rules
+.SUFFIXES:
+.SUFFIXES: .o .c .cc
+
+CC = gcc
+COPTIONS=
+CPPFLAGS=-O2
+LDFLAGS=
+
+CXX = c++
+CXXOPTIONS=
+
+DOCTEXT = ${top_srcdir}/src/doctext/doctext
+
+AR          = ar
+RANLIB      = ranlib
+
+LIBS=
+C_COMPILE = ${CC} ${DEFS} ${INCLUDES} ${CPPFLAGS} ${CFLAGS} ${COPTIONS}
+C_LINK    = ${CC} ${CFLAGS} ${LDFLAGS}
+CXX_COMPILE = ${CXX} ${DEFS} ${INCLUDES} ${CPPFLAGS} ${CXXFLAGS} ${CXXOPTIONS}
+CXX_LINK    = ${CXX} ${CXXFLAGS} ${LDFLAGS}
+
+mandir=${datarootdir}/man
+wwwdir=${prefix}/www
+manpages: ${mandir}/man1
+	${DOCTEXT} -quotefmt -mpath ${mandir}/man1 -ext 1 ${doc_SOURCES}
+wwwpages: ${wwwdir}/www1
+	${DOCTEXT} -html -dosnl -quotefmt -mpath ${wwwdir}/www1 ${doc_SOURCES}
+
+${wwwdir}/www1:
+	mkdir -p ${wwwdir}/www1
+${mandir}/man1:
+	mkdir -p ${mandir}/www1
+
+
+.c.o:
+	${C_COMPILE} -c $<
+.cc.o:
+	${CXX_COMPILE} -c $<

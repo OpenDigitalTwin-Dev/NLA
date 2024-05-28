@@ -1,0 +1,73 @@
+ALL: tohtml
+SHELL       = /bin/bash
+INSTALL_PROGRAM = ${INSTALL}
+INSTALL_DATA    = ${INSTALL} -m 644
+
+include ../../Makerules
+top_srcdir=../..
+srcdir=.
+datarootdir     = ${prefix}/share
+VPATH=.:${srcdir}
+
+LIBS      =  ../../lib/libsowing.a
+INCLUDES   = -I${top_srcdir}/include -I. -I../../include
+DEFS       =
+PROGRAMS = tohtml tortf
+
+BASEOBJS = search.o texactio.o rdaux.o rdindx.o label.o scan.o \
+           refmap.o style.o dimen.o userdef.o tabular.o biblio.o environ.o \
+	   math.o rddefs.o latexinfo.o accent.o simpleif.o
+HEADER_FILES = tex.h tohtmlpath.h.in search.h
+BASESOURCES = search.c texactio.c rdaux.c rdindx.c label.c scan.c \
+	refmap.c style.c dimen.c userdef.c tabular.c biblio.c environ.c \
+	math.c rddefs.c latexinfo.c accent.c simpleif.c
+BASEOBJS = $(BASESOURCES:.c=.o)
+
+SOURCES = $(BASESOURCES) tortf.c tohtml.c tex2html.c xwdsize.c
+SUBDIRS = testing
+DIST_COMMON = Makefile.in
+
+tohtml: Makefile $(HEADER_FILES) tohtml.o tex2html.o $(BASEOBJS)
+	$(C_LINK) -o tohtml tohtml.o tex2html.o $(BASEOBJS) $(LIBS)
+
+# This is an obsolete program and is no longer used
+xwdsize: xwdsize.o
+	$(C_LINK) -o xwdsize xwdsize.o -lX11
+
+doc_SOURCES = tohtml.c
+
+dist:
+	@if [ "X$(distdir)" == "X" ] ; then echo "Set distdir" ; exit 1 ; fi
+	@if [ ! -d $(distdir) ] ; then mkdir $(distdir) ; fi
+	if [ "X$(SOURCES)" != "X" ] ; then cp $(SOURCES) $(distdir) ; fi
+	if [ "X$(HEADER_FILES)" != "X" ] ; then cp $(HEADER_FILES) $(distdir) ; fi
+	if [ "X$(DIST_COMMON)" != "X" ] ; then cp $(DIST_COMMON) $(distdir) ; fi
+	for dir in $(SUBDIRS) ; do \
+		(cd $$dir && $(MAKE) distdir=../$(distdir)/$$dir dist ) ; done
+	if [ "X$(DOC_FILES)" != "X" ] ; then cp $(DOC_FILES) $(distdir) ; fi
+
+testing:
+	cd testing && ${MAKE} testing
+clean:
+	-/bin/rm -f *.o *~ $(PROGRAMS)
+	-/bin/rm -f tohtml\ win32/debug/*
+	(cd testing && ${MAKE} clean )
+distclean: clean
+	rm -f Makefile testing/Makefile tohtmlpath.h
+
+install:
+	$(INSTALL_PROGRAM) tohtml ${exec_prefix}/bin/tohtml
+	$(INSTALL_DATA) ../../share/basedefs.txt ${prefix}/share/basedefs.txt
+
+# We no longer need this program, which is good because X11 is getting
+# harder to find
+#	$(INSTALL_PROGRAM) xwdsize ${exec_prefix}/bin/xwdsize
+
+Makefile: Makefile.in
+	(cd ../.. && CONFIG_FILES=src/tohtml/Makefile && \
+	 export CONFIG_FILES && ./config.status)
+tohtmlpath.h: tohtmlpath.h.in ../../config.status
+	(cd ../.. && CONFIG_FILES=src/tohtml/tohtmlpath.h && \
+	 export CONFIG_FILES && ./config.status)
+
+.PHONY: testing clean distclean install all-redirect
