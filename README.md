@@ -58,3 +58,8 @@ petsc
 	cd petsc
 	./install.sh or ./uninstall.sh
 ```
+trilinos
+```
+	cd petsc
+	./install.sh or ./uninstall.sh
+```
