@@ -10,5 +10,5 @@
 #endif
 #endif
 #ifndef CONFIGURE_OPTIONS
-#define CONFIGURE_OPTIONS " '--prefix=/test/petsc-main/arch-linux-c-debug' 'CPPFLAGS=-O2'"
+#define CONFIGURE_OPTIONS " '--prefix=/test/toolkit/NLA/petsc/arch-linux-c-debug' 'CPPFLAGS=-O2'"
 #endif

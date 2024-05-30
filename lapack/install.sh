@@ -1,9 +1,9 @@
 #!/bin/sh
 
-sudo apt update
-sudo apt -y install cmake
-sudo apt -y install make
-sudo apt -y install gcc g++ gfortran
+apt update
+apt -y install cmake
+apt -y install make
+apt -y install gcc g++ gfortran
 
 mkdir build
 cd build

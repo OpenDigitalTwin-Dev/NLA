@@ -10,7 +10,7 @@
 #define TEXTFILTER_PATH ". c:\\sowing\\share f:\\sowing\\share"
 #define DIR_SEP '\\'
 #else
-#define TEXTFILTER_PATH ".:/test/petsc-main/arch-linux-c-debug/share"
+#define TEXTFILTER_PATH ".:/test/toolkit/NLA/petsc/arch-linux-c-debug/share"
 #define DIR_SEP '/'
 #endif
 #endif

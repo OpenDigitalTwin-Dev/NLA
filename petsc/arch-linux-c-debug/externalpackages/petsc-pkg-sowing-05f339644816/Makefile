@@ -1,6 +1,6 @@
 ALL: all-redirect
 SUBDIRS = src
-prefix      = /test/petsc-main/arch-linux-c-debug
+prefix      = /test/toolkit/NLA/petsc/arch-linux-c-debug
 exec_prefix = ${prefix}
 bindir      = ${exec_prefix}/bin
 datarootdir = ${prefix}/share
@@ -11,7 +11,7 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_DATA    = ${INSTALL} -m 644
 SHELL = /bin/bash
 top_srcdir=.
-abs_top_srcdir=/test/petsc-main/arch-linux-c-debug/externalpackages/petsc-pkg-sowing-05f339644816
+abs_top_srcdir=/test/toolkit/NLA/petsc/arch-linux-c-debug/externalpackages/petsc-pkg-sowing-05f339644816
 
 distdir = sowing-1.1.26.10
 

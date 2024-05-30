@@ -71,7 +71,7 @@ LIBOTHERS = -lpthread
 CDEFS   = -DAdd_
 
 #Begin Optimized options
-OPTF    = -O -fopenmp -fallow-argument-mismatch
+OPTF    = -O -fopenmp -Wno-argument-mismatch
 # Uncomment the line below if your version of gfortran is < 10
 #OPTF    = -O -fopenmp
 OPTL    = -O -fopenmp

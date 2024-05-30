@@ -1,6 +1,6 @@
 # Basic makefile rules that all Makes share
 
-prefix=/test/petsc-main/arch-linux-c-debug
+prefix=/test/toolkit/NLA/petsc/arch-linux-c-debug
 exec_prefix=${prefix}
 datarootdir=${prefix}/share
 libdir=${exec_prefix}/lib

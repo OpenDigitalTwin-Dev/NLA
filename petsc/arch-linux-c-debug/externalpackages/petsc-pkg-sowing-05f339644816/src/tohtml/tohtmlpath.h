@@ -14,15 +14,15 @@
  */
 
 #ifndef PSPATH
-#define PSPATH "/test/petsc-main/arch-linux-c-debug/bin/"
+#define PSPATH "/test/toolkit/NLA/petsc/arch-linux-c-debug/bin/"
 #endif
 
 #ifndef BASEDEF
-#define BASEDEF "/test/petsc-main/arch-linux-c-debug/share/basedefs.txt"
+#define BASEDEF "/test/toolkit/NLA/petsc/arch-linux-c-debug/share/basedefs.txt"
 #endif
 
 #ifndef IMAGEDIR
-#define IMAGEDIR "/test/petsc-main/arch-linux-c-debug/share/"
+#define IMAGEDIR "/test/toolkit/NLA/petsc/arch-linux-c-debug/share/"
 #endif
 
 /* This can be set to the base URL for a directory that contains the image

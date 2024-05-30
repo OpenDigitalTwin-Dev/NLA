@@ -1,6 +1,6 @@
 ALL: all-redirect
 SHELL   = /bin/bash
-prefix  = /test/petsc-main/arch-linux-c-debug
+prefix  = /test/toolkit/NLA/petsc/arch-linux-c-debug
 wwwdir  = ${prefix}/www
 DOCDIRS = bfort doctext install tohtml
 MKDIR   = mkdir -p

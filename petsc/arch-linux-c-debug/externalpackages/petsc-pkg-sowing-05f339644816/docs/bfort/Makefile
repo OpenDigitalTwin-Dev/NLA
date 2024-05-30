@@ -1,7 +1,7 @@
 ALL: all-redirect
 SHELL  = /bin/bash
 TOHTML = ../../src/tohtml/tohtml
-prefix = /test/petsc-main/arch-linux-c-debug
+prefix = /test/toolkit/NLA/petsc/arch-linux-c-debug
 wwwdir = ${prefix}/www
 MKDIR  = mkdir -p
 

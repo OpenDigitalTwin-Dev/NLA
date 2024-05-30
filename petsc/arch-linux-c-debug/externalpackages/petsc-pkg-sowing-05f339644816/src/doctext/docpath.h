@@ -8,5 +8,5 @@
 #if defined(__MSDOS__) || defined(WIN32)
 #define DOCTEXT_PATH ". c:\\textfilt\\progs\\doctext f:\\textfilt\\progs\\doctext"
 #else
-#define DOCTEXT_PATH ".:/test/petsc-main/arch-linux-c-debug/share/doctext"
+#define DOCTEXT_PATH ".:/test/toolkit/NLA/petsc/arch-linux-c-debug/share/doctext"
 #endif
