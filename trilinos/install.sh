@@ -13,7 +13,9 @@ rm -rf cmake-3.29.3-linux-x86_64/bin
 7za x 2.7z -o/$PWD/packages
 7za x 3.7z -o/$PWD/packages
 7za x 4.7z -o/$PWD/packages
+7za x 5.7z -o/$PWD/packages
 7za x cmake-3.29.3-linux-x86_64/bin.7z -o/$PWD/cmake-3.29.3-linux-x86_64/
+7za x cmake-3.29.3-linux-x86_64/1.7z -o/$PWD/cmake-3.29.3-linux-x86_64/
 
 mkdir build
 cd build
