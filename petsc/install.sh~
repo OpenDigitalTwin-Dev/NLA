@@ -1,0 +1,12 @@
+#!/bin/sh
+
+sudo apt update
+sudo apt -y install cmake
+sudo apt -y install make
+sudo apt -y install gcc g++ gfortran python3 libmpich-dev liblapack-dev
+
+./configure --prefix=$PWD/../install/petsc_install 
+make
+make PETSC_DIR=$PWD PETSC_ARCH=arch-linux-c-debug all
+make PETSC_DIR=/home/jiping/FENGSim/toolkit/NLA/petsc PETSC_ARCH=arch-linux-c-debug install
+make PETSC_DIR=/home/jiping/FENGSim/toolkit/NLA/install/petsc_install PETSC_ARCH="" check

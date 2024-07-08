@@ -1,0 +1,2 @@
+SLEPC_DIR = /home/jiping/Downloads/slepc-3.21.1
+PETSC_ARCH = installed-arch-linux2-c-debug

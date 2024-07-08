@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# need to install petsc first
+
+export PETSC_DIR=$PWD/../petsc
+./configure --prefix=$PWD/../install/slepc_install 
+make
+make PETSC_DIR=$PWD PETSC_ARCH=arch-linux-c-debug all
+make PETSC_DIR=/home/jiping/FENGSim/toolkit/NLA/petsc PETSC_ARCH=arch-linux-c-debug install
+make PETSC_DIR=/home/jiping/FENGSim/toolkit/NLA/install/petsc_install PETSC_ARCH="" check
