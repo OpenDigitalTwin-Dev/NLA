@@ -70,7 +70,7 @@ MPI ?= 1
 export CEED_DIR = $(abspath .)
 
 # XSMM_DIR env variable should point to XSMM main (github.com/hfp/libxsmm)
-XSMM_DIR ?= ../libxsmm
+XSMM_DIR ?= ../install/libxsmm_install
 
 # OCCA_DIR env variable should point to OCCA main (github.com/libocca/occa)
 OCCA_DIR ?= ../occa/install
