@@ -28,3 +28,5 @@ make PETSC_DIR=$PWD/../install/petsc_install PETSC_ARCH="" check
 #	    --with-scalar-type=complex \
 #	    --with-debugging=1 \
 #	    --with-x=0 \
+# >>> if uses --with-hdf5-dir=$PWD/../../install/hdf5_install \ but damask will search --with-hdf5-dir=/usr/lib/x86_64-linux-gnu/hdf5/openmpi/ \
+# then there will be some problems. so for damask mush use --with-hdf5-dir=/usr/lib/x86_64-linux-gnu/hdf5/openmpi/
