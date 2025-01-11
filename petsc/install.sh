@@ -9,7 +9,7 @@ sudo apt -y install gcc g++ gfortran python3 libmpich-dev liblapack-dev libhdf5-
 	    --with-fftw=1 \
 	    --with-fftw-dir=$PWD/../../install/fftw_install/ \
 	    --with-hdf5=1 \
-	    --with-hdf5-dir=$PWD/../../install/hdf5_install/ \
+	    --with-hdf5-dir=/usr/lib/x86_64-linux-gnu/hdf5/openmpi/ \
 	    --with-hdf5-fortran-bindings \
 	    --with-zlib=1 \
 	    --with-blas-lib=$PWD/../install/lapack_install/lib/libblas.a \
