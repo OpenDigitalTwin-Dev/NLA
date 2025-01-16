@@ -1,0 +1,1 @@
+../../scripts/check_no_trailing_whitespaces_or_tabs.sh

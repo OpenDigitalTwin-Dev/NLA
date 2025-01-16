@@ -1,0 +1,31 @@
+SET(HEADERS "")
+SET(SOURCES "")
+
+APPEND_SET(HEADERS
+  ${PACKAGE_BINARY_DIR}/${PACKAGE_NAME}_config.hpp
+  DTK_ConfigDefs.hpp
+  DTK_Core.hpp
+  DTK_DBC.hpp
+  DTK_DetailsUtils.hpp
+  DTK_SanitizerMacros.hpp
+  DTK_Types.h
+  DTK_Version.hpp
+  )
+
+APPEND_SET(SOURCES
+  DTK_Core.cpp
+  DTK_DBC.cpp
+  )
+
+TRIBITS_ADD_LIBRARY(
+  dtk_utils
+  HEADERS ${HEADERS}
+  SOURCES ${SOURCES}
+  ADDED_LIB_TARGET_NAME_OUT DTK_UTILS_LIBNAME
+  )
+TARGET_INCLUDE_DIRECTORIES(
+  ${DTK_UTILS_LIBNAME}
+  PUBLIC
+  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR};${PACKAGE_BINARY_DIR}>" # the latter to find config
+  "$<INSTALL_INTERFACE:include/>"
+)

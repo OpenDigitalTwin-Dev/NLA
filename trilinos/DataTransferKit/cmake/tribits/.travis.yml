@@ -1,0 +1,24 @@
+language: c++
+
+sudo: required
+dist: trusty
+
+before_install:
+  - sudo apt-get update -qq
+  - wget -O cmake.sh https://cmake.org/files/v3.10/cmake-3.10.3-Linux-x86_64.sh 
+  - sudo mkdir /usr/local/cmake-3.10.3
+  - sudo sh cmake.sh --skip-license --exclude-subdir --prefix=/usr/local/cmake-3.10.3
+  - export PATH=/usr/local/cmake-3.10.3/bin:$PATH
+  - sudo apt-get -y install gfortran
+  - sudo apt-get -y install valgrind
+  - sudo apt-get -y install ninja-build
+
+install:
+  - cd ..
+  - mkdir tribits-build
+  - cd tribits-build
+
+script:
+  - which cmake
+  - cmake --version
+  - ctest -V -S ../TriBITS/cmake/ctest/travisci/ctest_trusty_serial_debug.cmake

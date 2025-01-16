@@ -1,0 +1,16 @@
+#ifndef DTK_CONFIG_HPP
+#define DTK_CONFIG_HPP
+
+#cmakedefine DataTransferKit_VERSION_STRING "@DataTransferKit_VERSION_STRING@"
+
+#cmakedefine DataTransferKit_GIT_COMMIT_HASH "@DataTransferKit_GIT_COMMIT_HASH@"
+
+#cmakedefine HAVE_DTK_BOOST
+
+#cmakedefine01 HAVE_DTK_DBC
+
+#cmakedefine HAVE_DATATRANSFERKIT_EXPLICIT_INSTANTIATION
+
+#cmakedefine HAVE_DTK_NETCDF
+
+#endif // DTK_CONFIG_HPP
