@@ -23,7 +23,18 @@ cd build
 ./../cmake-3.29.3-linux-x86_64/bin/cmake \
     -DTPL_ENABLE_HDF5=ON \
     -DTrilinos_ENABLE_ALL_PACKAGES=ON \
-    -DCMAKE_INSTALL_PREFIX=$PWD/../../install/trilinos_install ..
+    -DTrilinos_ENABLE_EXPLICIT_INSTANTIATION=ON \
+    -DCMAKE_INSTALL_PREFIX=$PWD/../../install/trilinos_install \
+    -DTPL_ENABLE_MPI=ON \
+    -DTPL_ENABLE_BLAS=ON \
+    -DTPL_ENABLE_LAPACK=ON \
+    -DTPL_ENABLE_Boost=ON \
+    -DTrilinos_EXTRA_REPOSITORIES="DataTransferKit" \
+    -DTrilinos_ENABLE_DataTransferKit=ON \
+    -DDataTransferKit_ENABLE_DBC=ON \
+    -DDataTransferKit_ENABLE_EXPLICIT_INSTANTIATION=OFF \
+    -DDataTransferKit_ENABLE_TESTS=ON \
+    -DDataTransferKit_ENABLE_EXAMPLES=ON ..
 
 make -j8
 make install
