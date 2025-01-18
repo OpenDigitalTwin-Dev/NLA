@@ -4,7 +4,7 @@ sudo apt update
 sudo apt -y install cmake
 sudo apt -y install make
 sudo apt -y install gcc g++ gfortran libmpich-dev
-sudo apt -y install p7zip-full libblas-dev liblapack-dev libboost-dev libhdf5-dev libnetcdf-dev
+sudo apt -y install p7zip-full libblas-dev liblapack-dev libboost-dev libhdf5-dev libnetcdf-dev libhdf5-openmpi-dev
 
 rm -rf build
 rm -rf packages
