@@ -14,7 +14,8 @@ sudo apt -y install gcc g++ gfortran python3 libmpich-dev liblapack-dev libhdf5-
 	    --with-zlib=1 \
 	    --with-blas-lib=$PWD/../install/lapack_install/lib/libblas.a \
 	    --with-lapack-lib=$PWD/../install/lapack_install/lib/liblapack.a \
-	    --with-mpi=1 
+	    --with-mpi=1 \
+	    --with-scalar-type=complex # SLEPc interface requires PETSc compiled with complex scalars
 
 make -j4 
 make PETSC_DIR=$PWD PETSC_ARCH=arch-linux-c-debug all
