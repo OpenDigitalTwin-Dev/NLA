@@ -7,14 +7,15 @@ sudo apt -y install gcc g++ gfortran python3 libmpich-dev liblapack-dev libhdf5-
 
 ./configure --prefix=$PWD/../install/petsc_install \
 	    --with-fftw=1 \
-	    --with-fftw-dir=$PWD/../../install/fftw_install/ \
+	    --with-fftw-dir=$PWD/../../Tools/install/fftw_install/ \
 	    --with-hdf5=1 \
 	    --with-hdf5-dir=/usr/lib/x86_64-linux-gnu/hdf5/openmpi/ \
 	    --with-hdf5-fortran-bindings \
 	    --with-zlib=1 \
 	    --with-blas-lib=$PWD/../install/lapack_install/lib/libblas.a \
 	    --with-lapack-lib=$PWD/../install/lapack_install/lib/liblapack.a \
-	    --with-mpi=1 
+	    --with-mpi=1 \
+	    --with-scalar-type=complex # SLEPc interface requires PETSc compiled with complex scalars
 
 make -j4 
 make PETSC_DIR=$PWD PETSC_ARCH=arch-linux-c-debug all
